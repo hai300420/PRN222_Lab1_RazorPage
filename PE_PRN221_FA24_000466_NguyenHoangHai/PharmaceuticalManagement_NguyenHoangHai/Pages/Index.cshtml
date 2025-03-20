@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Login</h1>
+    @if (TempData["Message"] != null)
+    {
+        <div class="text-danger">@TempData["Message"]</div>
+    }
+    <form method="post">
+        <div>
+            <label>Email:</label>
+            <input type="text" name="email"></input>
+        </div>
+        <div class="my-2">
+            <label>Password:</label>
+            <input type="password" name="password"></input>
+        </div>
+        <input type="submit" value="Login" />
+    </form>
+
+</div>
